@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TVScope — About</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="nav__logo" href="index.html">📺 TVScope</a>
+      <div class="nav__links">
+        <a href="index.html" class="nav__link">Search</a>
+        <a href="saved.html" class="nav__link">Watchlist</a>
+        <a href="about.html" class="nav__link nav__link--active">About</a>
+      </div>
+      <div class="nav__user">
+        <span id="nav-user" class="nav__username"></span>
+        <button id="logout-btn" class="btn btn--sm" type="button">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="page-section">
+      <h1 class="page-section__title">About TVScope</h1>
+
+      <div class="about-grid">
+        <article class="about-card">
+          <h2 class="about-card__heading">What is TVScope?</h2>
+          <p>TVScope lets you search for any TV show, save it to your personal watchlist, and mark episodes as watched. All data is stored in your browser — no account needed.</p>
+        </article>
+
+        <article class="about-card">
+          <h2 class="about-card__heading">How does it work?</h2>
+          <p>Search results come from the free <strong>TVmaze API</strong> — no API key required. Your watchlist is saved in <code>localStorage</code> so it survives page refreshes.</p>
+        </article>
+
+        <article class="about-card">
+          <h2 class="about-card__heading">Tech Stack</h2>
+          <ul class="about-card__list">
+            <li>HTML5 — semantic structure</li>
+            <li>CSS3 — Flexbox, Grid, custom properties</li>
+            <li>JavaScript — ES modules, async/await</li>
+            <li>TVmaze API — free, no registration</li>
+            <li>localStorage — client-side persistence</li>
+          </ul>
+        </article>
+
+        <article class="about-card">
+          <h2 class="about-card__heading">API Info</h2>
+          <p>Endpoint used: <code>https://api.tvmaze.com/search/shows?q=query</code></p>
+          <p>Free tier, no API key, no rate limits for search.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Data from <a href="https://www.tvmaze.com/" target="_blank" rel="noopener">TVmaze</a></p>
+  </footer>
+
+  <script type="module" src="js/about.js"></script>
+</body>
+</html>
