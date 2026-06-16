@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TVScope — My Watchlist</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="nav__logo" href="index.html">📺 TVScope</a>
+      <div class="nav__links">
+        <a href="index.html" class="nav__link">Search</a>
+        <a href="saved.html" class="nav__link nav__link--active">Watchlist</a>
+        <a href="about.html" class="nav__link">About</a>
+      </div>
+      <div class="nav__user">
+        <span id="nav-user" class="nav__username"></span>
+        <button id="logout-btn" class="btn btn--sm" type="button">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="page-section">
+      <h1 class="page-section__title">My Watchlist</h1>
+      <p id="empty-msg" class="empty-msg" hidden>
+        No shows saved yet. <a href="index.html">Search for shows →</a>
+      </p>
+      <div id="saved-grid" class="show-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Data from <a href="https://www.tvmaze.com/" target="_blank" rel="noopener">TVmaze</a></p>
+  </footer>
+
+  <script type="module" src="js/saved.js"></script>
+</body>
+</html>
