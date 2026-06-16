@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TVScope — Search Shows</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="nav__logo" href="index.html">📺 TVScope</a>
+      <div class="nav__links">
+        <a href="index.html" class="nav__link nav__link--active">Search</a>
+        <a href="saved.html" class="nav__link">Watchlist</a>
+        <a href="about.html" class="nav__link">About</a>
+      </div>
+      <div class="nav__user">
+        <span id="nav-user" class="nav__username"></span>
+        <button id="logout-btn" class="btn btn--sm" type="button">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="search-section">
+      <h1 class="search-section__title">Find TV Shows</h1>
+
+      <form id="search-form" class="search-form" novalidate>
+
+        <div class="field">
+          <label for="query-input" class="field__label">Show name</label>
+          <input
+            id="query-input"
+            class="field__input"
+            type="text"
+            name="query"
+            placeholder="e.g. Breaking Bad, The Office…"
+            required
+            minlength="2"
+            autocomplete="off"
+          >
+          <span id="query-error" class="field__error" hidden>Please enter at least 2 characters.</span>
+        </div>
+
+        <div class="field">
+          <label for="status-select" class="field__label">Status</label>
+          <select id="status-select" class="field__input" name="status">
+            <option value="">All statuses</option>
+            <option value="Running">Running</option>
+            <option value="Ended">Ended</option>
+            <option value="In Development">In Development</option>
+          </select>
+        </div>
+
+        <div class="field field--inline">
+          <input type="checkbox" id="rated-only" name="rated" class="field__checkbox">
+          <label for="rated-only" class="field__label">Rated shows only</label>
+        </div>
+
+        <div class="search-form__actions">
+          <button type="submit" class="btn btn--primary">Search</button>
+          <button type="reset" id="reset-btn" class="btn">Clear</button>
+        </div>
+
+      </form>
+    </section>
+
+    <section class="results-section">
+      <p id="loading-msg" class="loading-msg" hidden>⏳ Searching shows…</p>
+      <p id="error-msg" class="error-msg" hidden></p>
+      <p id="results-count" class="results-count" hidden></p>
+      <div id="results-grid" class="show-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Data from <a href="https://www.tvmaze.com/" target="_blank" rel="noopener">TVmaze</a></p>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
