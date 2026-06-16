@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TVScope — Sign In</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-page">
+  <main class="login-main">
+    <div class="login-card">
+      <h1 class="login-card__title">📺 TVScope</h1>
+      <p class="login-card__subtitle">Search and track your favourite TV shows</p>
+
+      <form id="login-form" class="login-form" novalidate>
+        <div class="field">
+          <label for="name-input" class="field__label">Your name</label>
+          <input
+            id="name-input"
+            class="field__input"
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            required
+            minlength="2"
+            maxlength="40"
+            autocomplete="name"
+          >
+          <span id="login-error" class="field__error" hidden></span>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Get Started →</button>
+      </form>
+    </div>
+  </main>
+
+  <script type="module" src="js/login.js"></script>
+</body>
+</html>
